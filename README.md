@@ -28,37 +28,13 @@ O arquivo de exemplo utilizado é `Bíblia_Sagrada(port-br).txt`.
 
 ## Scripts
 
-### 1. Huffman Compress
-
-**Arquivo:** `huffman_compressed.py`  
-
-**O que faz**:
-- Lê o arquivo TXT.
-- Aplica pré-processamento:
-  - Remove caracteres especiais
-  - Converte todas as letras para maiúsculas
-  - Limita a 30 letras e 10 números
-  - Substitui `;` por `.`
-- Gera a árvore de Huffman e os códigos binários.
-- Cria o arquivo binário comprimido: Bíblia_Sagrada(port-br)_compressed.bin
-- - Salva a tabela de códigos para descompressão: Bíblia_Sagrada(port-br)_codes.pkl
 
 **Como executar**:
 
 ```bash
 python3 huffman_compress.py
 
-### 2. Huffman Descompress
 
-**Arquivo:** `huffman_descompressed.py`  
-
-**O que faz**:
-- Lê o arquivo binário comprimido e a tabela de códigos.
-- Converte os bytes em bits e remove o padding extra.
-- Reconstrói o texto pré-processado.
-- Gera o arquivo descomprimido: Bíblia_Sagrada(port-br)_decompressed.txt
-
-**Como executar**:
 
 ```bash
 python3 huffman_descompressed.py
