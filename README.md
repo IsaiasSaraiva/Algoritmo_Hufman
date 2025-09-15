@@ -20,17 +20,17 @@ O arquivo de exemplo utilizado é `Bíblia_Sagrada(port-br).txt`.
 
 ## Estrutura da pasta
 
-├── Bíblia_Sagrada(port-br).txt # Arquivo de entrada
-├── huffman_compress.py # Script de compressão
-├── huffman_decompress.py # Script de descompressão
-├── Bíblia_Sagrada(port-br)_compressed.bin # Arquivo comprimido gerado
-├── Bíblia_Sagrada(port-br)_codes.pkl # Tabela de códigos para descompressão
+- Bíblia_Sagrada(port-br).txt # Arquivo de entrada
+- huffman_compress.py # Script de compressão
+- huffman_decompress.py # Script de descompressão
+- Bíblia_Sagrada(port-br)_compressed.bin # Arquivo comprimido gerado
+- Bíblia_Sagrada(port-br)_codes.pkl # Tabela de códigos para descompressão
 
 ## Scripts
 
 ### 1. Huffman Compress
 
-**Arquivo:** `huffman_compress.py`  
+**Arquivo:** `huffman_compressed.py`  
 
 **O que faz**:
 - Lê o arquivo TXT.
@@ -47,4 +47,19 @@ O arquivo de exemplo utilizado é `Bíblia_Sagrada(port-br).txt`.
 
 ```bash
 python3 huffman_compress.py
+
+### 2. Huffman Descompress
+
+**Arquivo:** `huffman_descompressed.py`  
+
+**O que faz**:
+- Lê o arquivo binário comprimido e a tabela de códigos.
+- Converte os bytes em bits e remove o padding extra.
+- Reconstrói o texto pré-processado.
+- Gera o arquivo descomprimido: Bíblia_Sagrada(port-br)_decompressed.txt
+
+**Como executar**:
+
+```bash
+python3 huffman_descompressed.py
 
